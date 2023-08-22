@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import ButtonGroup from './Component/ButtonGroup';
+// import Inputfield from './Component/InputField';
 
 function App() {
+  const PrintButtonClick = (event) =>{
+    console.log(event.target.name);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload - blah blah blah.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ButtonGroup button={["one", "Two", "Three"]} doSomethingAfterClick={PrintButtonClick}/>
       </header>
     </div>
   );
