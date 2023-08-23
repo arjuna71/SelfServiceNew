@@ -1,0 +1,14 @@
+.customButton{
+    background-color: gray;
+    color: white;
+    font-size: 32px;
+    border: 1.5px solid gray;
+    border-radius: 19px;
+    font-weight: bold;
+}
+.staticButtonSize{
+    width: 600px
+}
+.imageSize{
+    width: 90px;
+}
