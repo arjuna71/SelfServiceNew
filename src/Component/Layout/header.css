@@ -1,18 +1,19 @@
-.header-style{
-    color: white;
-    /* float: right; */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
 }
 
-.header-button{
-    margin-top: -58px;
-    float: right;
-    
+.nav-logo {
+    width: 60px;
 }
 
-.bottom{
-    margin-bottom: 16px; 
+.nav-items{
+    list-style: none;
+    display: flex;
 }
 
-.button-margin{
-    margin-right: 20px;
+.nav-items > li {
+    padding: 10px;
 }

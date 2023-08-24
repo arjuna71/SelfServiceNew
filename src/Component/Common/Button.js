@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import './button.css'
-import '../Layout/header.css'
+import '../Layout/Header.css'
 
 
 const Button = ({ button, doSomethingAfterClick, size, ...props }) => {

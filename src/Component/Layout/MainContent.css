@@ -1,0 +1,35 @@
+.row {
+    display: flex; 
+}
+
+.left {
+  width: 75%;
+  height: 77vh;
+}
+
+.right {
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item > li {
+  list-style: none;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+}
