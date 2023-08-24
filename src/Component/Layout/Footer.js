@@ -1,10 +1,10 @@
 import React from "react";
 
-const Footer = ({ }) => {
+const Footer = ({text}) => {
     return (
         <>
             <div>
-
+                {text}
             </div>
         </>
         );

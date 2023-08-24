@@ -5,6 +5,7 @@
     border: 1.5px solid gray;
     border-radius: 19px;
     font-weight: bold;
+    margin-top: 0px;
 }
 .staticButtonSize{
     width: 600px

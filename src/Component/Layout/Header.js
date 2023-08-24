@@ -1,10 +1,10 @@
 import React from "react";
 
-const Header = ({ }) => {
+const Header = ({...props}) => {
     return (
         <>
             <div>
-
+                {props.children}
             </div>
         </>
         );

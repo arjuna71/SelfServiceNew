@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './button.css'
-import logo from '../logo.svg'
+import '../Layout/header.css'
 
 
 const Button = ({ button, doSomethingAfterClick, size, ...props }) => {
