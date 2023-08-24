@@ -22,6 +22,7 @@
   color: white;
   margin-bottom: -15px;
   margin-top: 0px;
+  width: 100%;
 }
 
 .App-body {
@@ -32,6 +33,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  top: 50%;
+  position: absolute;
+  width: 100%;
 }
 
 .App-footer {
@@ -43,6 +47,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .App-link {

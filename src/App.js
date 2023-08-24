@@ -19,9 +19,9 @@ function App() {
       <header className="App-header">
         <div><Header>
           <img className='imageSize' id="btnImage1" src={logo} />
-          <div >
+          <div>
             <div className='header-button bottom'><Button id="btnExitTriage" button='Exit Triage' doSomethingAfterClick={PrintButtonClick} size="header-style" /></div>
-            <div className='header-button'><Button id="btnSelectLanguage" button='English' doSomethingAfterClick={PrintButtonClick} size="header-style" style={{ 'margin-right': '20px' }} /></div>
+            <div className='header-button'><Button id="btnSelectLanguage" button='English' doSomethingAfterClick={PrintButtonClick} size="header-style button-margin" /></div>
           </div>
         </Header>
         </div>

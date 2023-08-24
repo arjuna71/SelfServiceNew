@@ -10,5 +10,9 @@
 }
 
 .bottom{
-    margin-bottom: 25px; 
+    margin-bottom: 16px; 
+}
+
+.button-margin{
+    margin-right: 20px;
 }
