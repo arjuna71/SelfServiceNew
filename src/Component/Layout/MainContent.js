@@ -13,7 +13,6 @@ const MainContent = () => {
   const navigate = useNavigate();
   const [state, setState] = useState({ nextStep: false });
 
- // "aboutMe","location", "symptoms", "relatedSymptom", "careOptions"
   function btnClicked() {
     var location = '/Pages/'
     document.getElementById("aboutMe").setAttribute("class", "")
@@ -51,17 +50,22 @@ const MainContent = () => {
     }
   }
 
-  function aboutMeSideMenu(){
+  function rightSideMenu(id) {
     var location = '/Pages/'
-    navigate(`${location}AboutMe`)
-    setState({ nextStep: 'aboutMe' });
-    document.getElementById("aboutMe").setAttribute("class", "activeMenu")
+    navigate(`${location + id}`)
+    setState({ nextStep: id });
+    document.getElementById(id).setAttribute("class", "activeMenu")
   }
-  
+
   useEffect(() => {
-    debugger;
-    const path = window.location.pathname;
-    console.log(state.nextStep);
+    if (document.getElementsByClassName('activeMenu').length <= 2) {
+      if (document.getElementsByClassName('activeMenu')[1]?.id === state.nextStep)
+        document.getElementsByClassName('activeMenu')[0]?.setAttribute("class", "")
+      else
+        document.getElementsByClassName('activeMenu')[1]?.setAttribute("class", "")
+      localStorage.setItem("nextStep", state.nextStep);
+      //alert(state.nextStep);
+    }
   })
   return (
     <section>
@@ -86,11 +90,11 @@ const MainContent = () => {
         <vl />
         <div className="right">
           <ul className="item">
-            <li id="aboutMe" onClick={aboutMeSideMenu}>About Me</li>
-            <li id="location">Location</li>
-            <li id='symptoms'>Symptoms</li>
-            <li id='relatedSymptom'>Related Symptoms</li>
-            <li id='careOptions'>Care Option</li>
+            <li id="aboutMe" onClick={(e) => rightSideMenu(e.currentTarget.id)}>About Me</li>
+            <li id="location" onClick={(e) => rightSideMenu(e.currentTarget.id)}>Location</li>
+            <li id='symptoms' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Symptoms</li>
+            <li id='relatedSymptom' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Related Symptoms</li>
+            <li id='careOptions' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Care Option</li>
           </ul>
         </div>
       </div>
