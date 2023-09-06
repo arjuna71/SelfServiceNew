@@ -17,3 +17,10 @@
 .nav-items > li {
     padding: 10px;
 }
+
+.toggleDisplayStyle {
+    position: absolute; 
+    margin-left: 1%;
+    margin-top: 3%;
+    background-color: white;
+}
