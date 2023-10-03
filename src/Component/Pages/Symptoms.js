@@ -1,9 +1,10 @@
+import i18next from "i18next";
 import React from "react";
 
 const Symptoms =() =>{
     return(
         <div>
-            Symtpoms
+            {i18next.t("rightSideMenu.symptoms")}
         </div>
     )
 }

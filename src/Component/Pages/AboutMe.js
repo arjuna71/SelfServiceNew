@@ -1,9 +1,10 @@
 import React from "react";
+import i18next from "i18next";
 
 const AboutMe =() =>{
     return(
         <div>
-            About Me
+            {i18next.t("rightSideMenu.aboutMe")} 
         </div>
     )
 }

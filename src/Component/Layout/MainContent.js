@@ -8,6 +8,7 @@ import Symptoms from "../Pages/Symptoms";
 import RelatedSymptoms from "../Pages/RelatedSymptoms";
 import CareOptions from "../Pages/CareOptions"
 import { useEffect, useState } from "react";
+import i18next from "i18next";
 
 const MainContent = () => {
   const navigate = useNavigate();
@@ -64,7 +65,6 @@ const MainContent = () => {
       else
         document.getElementsByClassName('activeMenu')[1]?.setAttribute("class", "")
       localStorage.setItem("nextStep", state.nextStep);
-      //alert(state.nextStep);
     }
   })
   return (
@@ -72,7 +72,7 @@ const MainContent = () => {
       <div className="row">
         <div className="left">
           {!state.nextStep ?
-            <p>Emergency Care Yes Selected</p>
+            <p>{i18next.t("bodyContent.emergencyText")}</p>
             : state.nextStep === "aboutMe" ? <AboutMe />
               : state.nextStep === "location" ? <Location />
                 : state.nextStep === "symptoms" ? <Symptoms />
@@ -81,20 +81,20 @@ const MainContent = () => {
                       : state.nextStep = false}
           <Button
             id="btnTextSpecificText"
-            button="Next Button"
+            button={i18next.t("nextButton")}
             doSomethingAfterClick={btnClicked}
             size="staticButtonSize"
           />
 
         </div>
-        <vl />
+        <ul />
         <div className="right">
           <ul className="item">
-            <li id="aboutMe" onClick={(e) => rightSideMenu(e.currentTarget.id)}>About Me</li>
-            <li id="location" onClick={(e) => rightSideMenu(e.currentTarget.id)}>Location</li>
-            <li id='symptoms' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Symptoms</li>
-            <li id='relatedSymptom' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Related Symptoms</li>
-            <li id='careOptions' onClick={(e) => rightSideMenu(e.currentTarget.id)}>Care Option</li>
+            <li id="aboutMe" aria-label={i18next.t("rightSideMenu.aboutMe")} onClick={(e) => rightSideMenu(e.currentTarget.id)}>{i18next.t("rightSideMenu.aboutMe")}</li>
+            <li id="location" aria-label={i18next.t("rightSideMenu.location")} onClick={(e) => rightSideMenu(e.currentTarget.id)}>{i18next.t("rightSideMenu.location")}</li>
+            <li id='symptoms' aria-label={i18next.t("rightSideMenu.symptoms")} onClick={(e) => rightSideMenu(e.currentTarget.id)}>{i18next.t("rightSideMenu.symptoms")}</li>
+            <li id='relatedSymptom' aria-label={i18next.t("rightSideMenu.relatedSymptoms")} onClick={(e) => rightSideMenu(e.currentTarget.id)}>{i18next.t("rightSideMenu.relatedSymptoms")}</li>
+            <li id='careOptions' aria-label={i18next.t("rightSideMenu.careOptions")} onClick={(e) => rightSideMenu(e.currentTarget.id)}>{i18next.t("rightSideMenu.careOptions")}</li>
           </ul>
         </div>
       </div>

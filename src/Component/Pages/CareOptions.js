@@ -1,9 +1,10 @@
 import React from "react";
+import i18next from "i18next";
 
 const CareOptions =() =>{
     return(
         <div>
-            List OF Care Options
+            {i18next.t("rightSideMenu.careOptions")} 
         </div>
     )
 }

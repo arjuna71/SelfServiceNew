@@ -1,0 +1,22 @@
+{
+    "header": {
+        "english": "Anglaise",
+        "french": "Français",
+        "german": "Allemand",
+        "spanish": "Espagnol",
+        "languageMsg": "Etes-vous sûr de vouloir changer la langue ?",
+        "exitTriage": "Triage de sortie",
+        "exitTriageMsg" : "Etes-vous sûr de vouloir quitter le triage?"
+    },
+    "rightSideMenu":{
+        "aboutMe": "Sur moi",
+        "location": "Emplacement",
+        "symptoms": "Symptôme",
+        "relatedSymptoms":"Symptômes associés",
+        "careOptions":"Option de soins"
+    },
+    "bodyContent":{
+        "emergencyText":"Soins d'urgence Oui Sélectionné"
+    },
+    "nextButton": "Bouton Suivant"
+}

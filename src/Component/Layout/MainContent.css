@@ -42,3 +42,90 @@
   color: white;
   width: 100%;
 }
+
+.ReactModalPortal {
+  .ReactModal__Overlay.ReactModal__Overlay--after-open.ReactModal__Overlay_triagepopup {
+      opacity: 1;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      z-index: 9999;
+
+      .ReactModal__Content.ReactModal__Content--after-open {
+          padding: 20px 15px !important;
+          max-width: 45%;
+          margin: 0 auto;
+          height: auto;
+          display: inline-flex;
+          align-items: center;
+          flex-wrap: wrap;
+          top: auto !important;
+          bottom: auto !important;
+          border-radius: 12px;
+
+          label {
+              width: 100%;
+              text-align: center;
+              padding-bottom: 10px;
+          }
+
+          .pop_button {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+          }
+
+          .confirm_title {
+              color: rgb(97, 100, 97);
+              font-weight: 500;
+              text-transform: uppercase;
+          }
+
+          .modal_yes {
+              color: #0776df;
+              padding-left: 0;
+          }
+
+          .modal_no {
+              color: #0776df;
+          }
+
+          .sign {
+              font-style: normal;
+              font-weight: bold;
+              color: rgba(105, 158, 255, 1);
+              cursor: pointer;
+          }
+
+          .popup-ok:hover,
+          .popup-ok:focus {
+              background-color: #699eff !important;
+              color: #fff !important;
+          }
+
+          .popup-ok {
+              background-color: #699eff;
+              border: none;
+              border-radius: 25px;
+              color: white;
+              padding: 10px 20px;
+              font-family: Helvetica;
+              text-align: center;
+              text-decoration: none;
+              display: block;
+              font-size: 16px !important;
+              margin-top: 15px;
+              margin-left: auto;
+              width: 100px;
+              float: right;
+
+              outline: none;
+          }
+
+
+          @media(max-width: 767px) {
+              max-width: 80%;
+          }
+      }
+  }
+}
